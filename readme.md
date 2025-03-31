@@ -1,7 +1,7 @@
 # webretro
 
 ## TODO
-- [ ] Redesign core selector and upload area 
+- [X] Redesign core selector and upload area 
 - [ ] Redesign menubar
 - [ ] Pivot the absolute element enviorment to relative
 - [ ] Optimize core loader (Very shit at the moment)
