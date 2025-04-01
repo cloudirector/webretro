@@ -14,8 +14,13 @@
 > * mGBA (GB/GBC/GBA)
 > * Mupen64Plus-Next (Nintendo 64)
 > * Nestopia UE (NES)
-> * ParaLLEl N64 (Nintendo 64)
 > * Snes9x (SNES)
+
+## I also crudly added some cheat files 
+> * Mario Kart 64
+> * Sonic The Hedgehog
+> * Super Mario 64
+> * Super Mario Bros
 
 ## Converting converting to static (dude cors is a mf)
 > ``` console
