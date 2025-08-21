@@ -1,12 +1,14 @@
 # webretro
 
 ## TODO
+- [x] Add files
 - [X] Redesign core selector and upload area 
 - [ ] Redesign menubar
 - [ ] Pivot the absolute element enviorment to relative
 - [ ] Optimize core loader (Very shit at the moment)
-- [ ] offlineBuild.sh
-- [ ] Web Offline Builder would be sick
+- [ ] Offline Builder
+
+### * Currently offline ready *
 
 ## These cores are the only cores included to reduce size 
 > * Genesis Plus GX (Sega Systems)
