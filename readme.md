@@ -10,8 +10,6 @@
 - [ ] Optimize core loader * Very shit at the moment *
 - [ ] Offline Builder
 
-### * Currently offline ready *
-
 ## These cores are the only cores included to reduce size 
 > * Genesis Plus GX (Sega Systems)
 > * melonDS (Nintendo DS)
