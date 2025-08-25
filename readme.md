@@ -5,7 +5,7 @@
 - [X] Redesign core selector and upload area 
 - [ ] Redesign menubar
 - [ ] Pivot the absolute element enviorment to relative
-- [ ] Optimize core loader (Very shit at the moment)
+- [ ] Optimize core loader * Very shit at the moment *
 - [ ] Offline Builder
 
 ### * Currently offline ready *

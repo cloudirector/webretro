@@ -1,0 +1,251 @@
+<!-- Base Source Code: https://github.com/BinBashBanana/webretro -->
+<html data-theme="night">
+    <head>
+    	<title>webretro</title>
+    	<link rel="stylesheet" href="assets/base.css">
+    	<link rel="stylesheet" href="assets/daisyui.min.css">
+    	<link rel="stylesheet" href="assets/jswindow.css">
+    	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+    </head>
+    
+    <body>
+    	<div class="main bg-base-100" id="mainarea">
+    
+    		<div id="menubar">
+    			<input type="checkbox" id="menuhider" checked>
+    			<label for="menuhider" class="menuhiderlabel"></label>
+    			<ul id="menu">
+    				<li class="menuback"><a href="RetroArch.html" title="Back to core selection"></a></li>
+    				<li>
+    					<a id="keybindsbutton" href="">Keybinds</a>
+    				</li>
+    				<li>
+    					Saves
+    					<ul>
+    						<li class="pointer disabled" id="savegame">Save Game</li>
+    						<li class="pointer disabled" id="resetbutton">Reset</li>
+    						<li class="pointer disabled" id="exportsave">Export SRAM</li>
+    						<li class="pointer disabled" id="importsave">Import SRAM</li>
+    						<li class="disabled"><label><input type="checkbox" id="autosave" checked disabled>Autosave
+    								(5m)</label></li>
+    						<li><a id="savesbutton" href="">Recover Saves</a></li>
+    					</ul>
+    				</li>
+    				<li>States
+    					<ul>
+    						<li class="pointer disabled" id="savestate">Save State</li>
+    						<li class="pointer disabled" id="loadstate">Load State</li>
+    						<li class="pointer disabled" id="undosavestate">Undo Save State</li>
+    						<li class="pointer disabled" id="undoloadstate">Undo Load State</li>
+    						<li class="pointer disabled" id="exportstate">Export State</li>
+    						<li class="pointer disabled" id="importstate">Import State</li>
+    						<li><a id="statesbutton" href="">Recover States</a></li>
+    						<li class="menu-long menu-nohover" style="width: 200px;">You must save state before you export
+    							state; exported states are not states from the time of exporting.</li>
+    					</ul>
+    				</li>
+    				<li>Screenshots
+    					<ul>
+    						<li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
+    						<li><a id="screenshotsbutton" href="">Screenshots</a></li>
+    					</ul>
+    				</li>
+    				<li>More
+    					<ul>
+    						<li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox"
+    									id="smooth" disabled>Smooth Scaling</label></li>
+    						<li class="pointer" id="fullscreenbutton">Fullscreen</li>
+    						<li class="pointer" id="consolebutton">Console</li>
+    						<li>Theme
+    							<ul>
+    								<li class="menu-nohover">
+    									<form id="themeselector" class="menuform">
+    										<label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
+    										<label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
+    										<label><input type="radio" name="theme" value="webplayer">Web Player</label>
+    										<label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
+    									</form>
+    								</li>
+    							</ul>
+    						</li>
+    						<li class="pointer disabled" id="resetbutton2">Reset</li>
+    						<li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
+    						<li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
+    						<li>Shaders
+    							<ul>
+    								<li class="disabled">(Coming soon)</li>
+    							</ul>
+    						</li>
+    						<li id="pso">Pre-start Options
+    							<ul>
+    								<li class="menu-nohover">
+    									<form class="menuform" data-core="a5200">
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="mednafen_psx">
+    										<label><input type="checkbox" data-opt="highres">High Resolution</label>
+    										<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+    										<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+    										<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+    									</form>
+    									<form class="menuform" data-core="mednafen_psx_hw">
+    										<label><input type="checkbox" data-opt="softwarerenderer">Use Software
+    											Renderer</label>
+    										<label><input type="checkbox" data-opt="highres">High Resolution</label>
+    										<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+    										<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+    										<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+    									</form>
+    									<form class="menuform" data-core="mednafen_vb">
+    										<label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
+    									</form>
+    									<form class="menuform" data-core="mednafen_wswan">
+    										<label><input type="checkbox" data-opt="75hz">75hz Mode</label>
+    										<label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="melonds">
+    										<label><input type="checkbox" data-opt="leftright">Left/Right</label>
+    									</form>
+    									<form class="menuform" data-core="mgba">
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="mupen64plus_next">
+    										<label><input type="checkbox" data-opt="highres">High Resolution</label>
+    										<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+    									</form>
+    									<form class="menuform" data-core="o2em">
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="parallel_n64">
+    										<label><input type="checkbox" data-opt="highres">High Resolution</label>
+    										<label title="Use gles2n64 instead of Glide64"><input type="checkbox"
+    												data-opt="renderer2">Use glN64</label>
+    									</form>
+    									<form class="menuform" data-core="prosystem">
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="snes9x">
+    										<label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
+    									</form>
+    									<form class="menuform" data-core="stella2014">
+    										<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+    									</form>
+    									<form class="menuform" data-core="vecx">
+    										<label><input type="checkbox" data-opt="softwarerenderer">Use Software
+    											Renderer</label>
+    									</form>
+    									<form class="menuform" data-core="virtualjaguar">
+    										<label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
+    									</form>
+    									<form class="menuform" data-core="yabause">
+    										<label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
+    									</form>
+    								</li>
+    							</ul>
+    						</li>
+    					</ul>
+    				</li>
+    				<li id="menubutton" class="disabled">
+    					Menu
+    				</li>
+    				<li id="pause" class="disabled">
+    					Pause
+    				</li>
+    			</ul>
+    		</div>
+    
+    		<!-- grandParent -->
+    		<div class="flex flex-col items-center justify-center h-full w-full">
+    		    
+    			<!-- Title -->
+    			<h1 id="webretrotitle" class="text-6xl mb-5">webretro</h1>
+    
+    			<!-- main box -->
+    			<div id="ffd" class="bg-primary rounded-3xl overflow-auto z-10 p-10 flex flex-col justify-between mb-">
+    			    
+    				<!-- core section -->
+    				<div id="coreselectarea" class="flex flex-col items-center justify-center">
+    					<!-- <li><a href="?core=autodetect" class="greyer">AutoDetect</a></li> -->
+    					<span id="corelist" class="menu bg-base-200 rounded-box"></span>
+    				</div>
+    
+    				<!-- hidden then shown just the rom upload -->
+    				<div id="uploadarea" class="flex flex-col items-center justify-center">
+    					<h2 class="text-3xl mb-5 text-bold text-primary-content"><span id="systemname"></span> Emulator</h2>
+    					<input type="button" id="upload" value="Choose ROM File" class="btn">
+    				</div>
+                
+    				<!-- constant source footer  -->
+    				<div class="source flex justify-between mt-5 text-primary-content text-xs">
+    					<a href="info/Info.html" target="_blank">Credits</a>
+    					<span id="versionindicator"class="cursor-help"></span>
+    				</div>
+    			</div>
+    			
+    		</div
+    		
+    		<input type="button" id="startbutton" value="Start">
+    		<div id="loadingdiv">
+    			<p class="loadingloading">Loading</p>
+    			<p id="loadingtext"></p>
+    			<progress id="loadingbar" max="1"></progress>
+    		</div>
+    		<canvas id="canvas" class="texturePixelated"></canvas>
+    		<div id="canvasmask">
+    			<div id="resume">
+    				<div>
+    					<h1>Paused</h1>
+    					<h3>Click to resume</h3>
+    				</div>
+    			</div>
+    			<div id="sidealertholder"></div>
+    		</div>
+    		<div id="modals">
+    			<div id="managers">
+    				<div class="modaltop">
+    					<h2 id="managertitle"></h2>
+    					<span id="managerclose">&#x2716;</span>
+    				</div>
+    				<div id="keybindmanager">
+    					<h4>Click on the right column to change a key. Press save when you are finished!</h4>
+    					<table class="managertableparent managertableparentshort">
+    						<tbody class="managertable" id="keybindtable"></tbody>
+    					</table>
+    					<input type="button" id="savekeybinds" class="specialblue" value="Save">
+    					<input type="button" id="resetkeybinds" value="Reset to Default">
+    				</div>
+    				<div id="screenshotmanager">
+    					<div id="screenshotsdiv"></div>
+    					<div class="screenshotsbottom">
+    						<h4>Screenshots do not persist through page reloads! Download your screenshots now!</h4>
+    						<input type="button" id="downloadallscreenshots" value="Download All (zip)">
+    					</div>
+    				</div>
+    				<div id="savemanager">
+    					<table class="managertableparent">
+    						<tbody class="managertable" id="savetable"></tbody>
+    					</table>
+    					<h4>Here, you can download all of the webretro saves and states made on <i>this domain</i>.</h4>
+    					<div class="savesbottom">
+    						<span id="quotatext"></span>
+    					</div>
+    				</div>
+    				<div id="romselector">
+    					<table class="managertableparent">
+    						<tbody class="managertable" id="romselectortable"></tbody>
+    					</table>
+    					<h4 id="recommendedextensions"></h4>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </body>
+    <script src="assets/tailwindcss.js"></script>
+    <script src="assets/zip.min.js"></script>
+    <script src="assets/md5.min.js"></script>
+    <script src="uauth/uauth.js"></script>
+    <script src="assets/jswindow.js"></script>
+    <script src="assets/charToCodeMap.js"></script>
+    <script src="assets/base.js"></script>
+</html>
