@@ -542,26 +542,26 @@ function canvasCssWorkaround(css) {
 }
 
 // adjust the menu bar height
-function adjustActualMenuHeight() {
-	canvasCssWorkaround("top: " + actualMenuHeight + "px; height: calc(100vh - " + actualMenuHeight + "px);");
-	canvasMask.style.top = "" + actualMenuHeight + "px";
-	canvasMask.style.height = "calc(100vh - " + actualMenuHeight + "px)";
+// function adjustActualMenuHeight() {
+// 	canvasCssWorkaround("top: " + actualMenuHeight + "px; height: calc(100vh - " + actualMenuHeight + "px);");
+// 	canvasMask.style.top = "" + actualMenuHeight + "px";
+// 	canvasMask.style.height = "calc(100vh - " + actualMenuHeight + "px)";
 
-	menuBar.style.height = "" + actualMenuHeight + "px";
+// 	menuBar.style.height = "" + actualMenuHeight + "px";
 
-	adjustCanvasSize();
-}
+// 	adjustCanvasSize();
+// }
 
 // menu hider
-function adjustMenuHeight() {
-	if (menuHider.checked) {
-		actualMenuHeight = 0;
-		adjustActualMenuHeight();
-	} else {
-		actualMenuHeight = menuHeight;
-		adjustActualMenuHeight();
-	}
-}
+// function adjustMenuHeight() {
+// 	if (menuHider.checked) {
+// 		actualMenuHeight = menuHeight;
+// 		adjustActualMenuHeight();
+// 	} else {
+// 		actualMenuHeight = menuHeight;
+// 		adjustActualMenuHeight();
+// 	}
+// }
 
 // stop canvas change on menubar show/hide
 // menuHider.onchange = adjustMenuHeight;
@@ -979,8 +979,8 @@ fullscreenButton.onclick = function () {
 function setTheme(theme) {
 	if (themes.hasOwnProperty(theme)) {
 		document.body.dataset.theme = themes[theme].id;
-		menuHeight = themes[theme].menuHeight;
-		adjustMenuHeight();
+		// menuHeight = themes[theme].menuHeight;
+		// adjustMenuHeight();
 	}
 }
 
@@ -2043,7 +2043,7 @@ function afterStart() {
 
 	adjustCanvasSize();
 
-	adjustMenuHeight();
+	// adjustMenuHeight();
 	// menuBar.classList.add("show");
 	Module._cmd_toggle_menu();
 
