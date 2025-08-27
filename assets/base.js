@@ -205,6 +205,7 @@ var fileExts = {
 	"GB/GBC": ".gb, .gbc",
 	"Nintendo 64": ".n64, .v64, .z64, .u1, .ndd",
 	"Nintendo DS": ".nds, .srl",
+	"NES": ".nes",
 	"SNES": ".smc, .sfc, .swc, .fig, .bs",
 	"Sega Systems": ".mdx, .md, .smd, .gen, .sms, .gg, .sg, .68k, .sgd",
 	"Sega Genesis": ".mdx, .md, .smd, .gen, .sms, .68k, .sgd"
