@@ -519,11 +519,12 @@ function removeStatus(message) {
 	if (loadStatus == message) setStatus("");
 }
 
-// adjust canvas size to window
+// adjust canvas size to window on window update
 function adjustCanvasSize() {
 	var dpi = window.devicePixelRatio || 1;
 	var width = window.innerWidth * dpi;
-	var height = (window.innerHeight * dpi) - (actualMenuHeight * dpi);
+	var height = (window.innerHeight * dpi)
+	//  - (actualMenuHeight * dpi);
 	if (Module && Module.setCanvasSize) {
 		Module.setCanvasSize(width, height);
 	} else {
@@ -561,7 +562,9 @@ function adjustMenuHeight() {
 		adjustActualMenuHeight();
 	}
 }
-menuHider.onchange = adjustMenuHeight;
+
+// stop canvas change on menubar show/hide
+// menuHider.onchange = adjustMenuHeight;
 
 // logging
 function log(log, userInput) {
