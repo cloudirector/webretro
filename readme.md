@@ -2,8 +2,6 @@
 
 <img width="1960" height="1120" alt="image" src="https://github.com/user-attachments/assets/810f0f03-df4c-4f64-aed4-2695cc312902" />
 
-### Currently in a serverless structure 
-
 ## TODO
 - [x] Add files
 - [X] Redesign core selector and upload area 
